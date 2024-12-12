@@ -12,7 +12,7 @@ class TestMyFunction(unittest.TestCase):
     def test_input_2(self, mock_input):
        self.assertEqual(computer_pon(), 'チョキ')  
        
-    @patch('builtins.input', return_value='パー')
+    @patch('random.choice', return_value='パー')
     def test_input_3(self, mock_input):
        self.assertEqual(computer_pon(), 'パー')  
     
